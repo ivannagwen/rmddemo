@@ -1,0 +1,31 @@
+---
+title: "RMD Demo"
+author: "Ivanna Maxwell"
+date: "5/4/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, include = FALSE} 
+#include for kable
+library("knitr")
+
+source("analysis.R") #run it all based on analysis.R
+```
+## DEMO of .RMD
+
+According to the Hofstede dataset, the country with the highest individualism was `r max_country` and the country with the highest collectivism was `r min_country`.
+
+
+```{r, echo=FALSE}
+kable(idv_summary_df)
+```
+
+## Table of countries sorted by individualism scores
+
+```{r, echo=FALSE}
+kable(idv_data_df)
+```
